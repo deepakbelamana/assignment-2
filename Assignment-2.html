@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment-2
+        </title>
+    </head>
+    <body>
+        <input type="text" id="sentence" placeholder="enter a sentence"/>
+        <input type="text"  id="letter" placeholder="enter letter"/>
+        <button onclick="submitHandler()">submit</button>
+        <div id="result" style="padding: 30px;margin-top:10px;border: 1px solid black; width:50%; border-radius:10px;">
+
+        </div>
+        <script>
+            function submitHandler(){
+
+                    var sentence=document.getElementById('sentence').value;
+                    var letter=document.getElementById('letter').value;
+                    first_occurence=sentence.indexOf(letter)
+                    if(first_occurence!=-1)
+                    {
+                        result=sentence.substring(first_occurence+1)
+                        console.log(result)
+                    }
+                    else{
+                        result='the letter doesnot exist in the sentence..!'
+                    }
+                    document.getElementById('result').innerHTML=result
+            }
+        </script>
+    </body>
+</html>
